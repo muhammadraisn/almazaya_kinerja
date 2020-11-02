@@ -32,12 +32,42 @@
 	<div class="limiter">
 		<div class="container-login100" action="http://localhost/almazaya_login">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="<?= base_url('login/loginForm') ?>" method="post">
 					<span class="login100-form-title p-b-43">
 						Almazaya Sign On
 					</span>
-					
-					
+					<?php
+			        $errors = $this->session->flashdata('errors');
+			        if(!empty($errors)){
+			        ?>
+			          <div class="row">
+			              <div class="col-md-12">
+			              <div class="alert alert-danger text-center">
+			                  <?php foreach($errors as $key=>$error){ ?>
+			                  <?php echo "$error<br>"; ?>
+			                  <?php } ?>
+			              </div>
+			              </div>
+			          </div>
+			        <?php
+			        }
+			        if($msg = $this->session->flashdata('error_login')){ ?>
+			          <div class="row">
+			              <div class="col-md-12">
+			                <div class="alert alert-danger text-center">
+			                    <?= $msg ?>
+			                </div>
+			              </div>
+			          </div>
+			        <?php } else if($msg = $this->session->flashdata('success_login')){ ?>
+			          <div class="row">
+			              <div class="col-md-12">
+			                <div class="alert alert-success text-center">
+			                    <?= $msg ?>
+			                </div>
+			              </div>
+			          </div>
+			        <?php } ?>					
 					<div class="wrap-input100 validate-input" data-validate = "Valid username is required">
 						<input class="input100" type="text" name="username">
 						<span class="focus-input100"></span>
@@ -46,7 +76,7 @@
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name="password">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Password</span>
 					</div>
