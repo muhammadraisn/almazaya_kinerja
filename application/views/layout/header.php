@@ -30,7 +30,7 @@
 							<div class="right_bar_top d-flex align-items-center">
 
 								<!-- DropDown_Inbox -->
-								<div class="dropdown dropdown-inbox">
+								<!-- <div class="dropdown dropdown-inbox">
 									<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 										<i class="fa fa-envelope-o"></i> <span class="badge_coun"> 2 </span> </a>
 									<ul class="dropdown-menu scroll_auto height_fixed">
@@ -73,28 +73,36 @@
 											</ul>
 										</li>
 									</ul>
-								</div>
+								</div> -->
 								<!--DropDown_Inbox_End -->
 								<!-- Dropdown_User -->
 								<div class="dropdown dropdown-user">
 									<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
-									 aria-expanded="true"> <img class="img-circle pro_pic" src="<?php echo base_url()?>assets/images/about-1.jpg" alt=""> </a>
+									 aria-expanded="true"> 
+									 <?php if ($this->session->userdata('foto')==NULL): ?>
+									 <!-- <img class="img-circle pro_pic" src="<?php echo base_url() ?> upload/foto_user/user5.png" alt=""> </a> -->
+									 <?php else: ?>
+									 <img class="img-circle pro_pic" src="<?php echo base_url().'upload/foto_user/'.$this->session->userdata('foto') ?>" alt=""> </a>
+									<?php endif ?>
 									<ul class="dropdown-menu dropdown-menu-default">
 										<li>
-											<a href="#"> <i class="icon-user"></i> Profile </a>
+											<a> <?= $this->session->userdata('nama') ?> </a>
 										</li>
 										<li>
-											<a href="#"> <i class="icon-settings"></i> Settings </a>
+											<a href="#"> <i class="icon-user"></i> Ubah Foto </a>
 										</li>
 										<li>
+											<a href="#"> <i class="icon-settings"></i> Ubah Password </a>
+										</li>
+										<!-- <li>
 											<a href="#"> <i class="icon-directions"></i> Help </a>
 										</li>
 										<li class="divider"></li>
 										<li>
 											<a href="https://theembazaar.com/?password-protected=login&amp;redirect_to=https%3A%2F%2Ftheembazaar.com%2Fdemo%2Fthemesfolios%2Fintellir-mobile%2Fv1%2Flock_screen.html"> <i class="icon-lock"></i> Lock </a>
-										</li>
+										</li> -->
 										<li>
-											<a href="#"> <i class="icon-logout"></i> Log Out </a>
+											<a href="<?php echo base_url()?>auth/logout"> <i class="icon-logout"></i> Log Out </a>
 										</li>
 									</ul>
 								</div>

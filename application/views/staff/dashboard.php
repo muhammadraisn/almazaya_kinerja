@@ -30,13 +30,13 @@
 					<section class="chart_section">
 
 						<div class="row">
-							<div class="col-12">
+							<div class="col-lg-3 col-md-6 col-sm-12">
 								<div class="info_items bg_green d-flex align-items-center">
 									<span class="info_items_icon">
 										<i class="ion-android-people"></i>
 									</span>
 									<div class="info_item_content">
-										<span class="info_items_text">New users</span>
+										<span class="info_items_text">Masih Proses</span>
 										<span class="info_items_number">450</span>
 										<div class="progress">
 											<div class="progress-bar width-45"></div>
@@ -46,13 +46,13 @@
 								</div>
 							</div>
 							<!-- /info-box-content -->
-							<div class="col-12">
+							<div class="col-lg-3 col-md-6 col-sm-12">
 								<div class="info_items bg_yellow d-flex align-items-center">
 									<span class="info_items_icon">
 										<i class="ion-ios-person"></i>
 									</span>
 									<div class="info_item_content">
-										<span class="info_items_text">Avg Time</span>
+										<span class="info_items_text">Hari Ini</span>
 										<span class="info_items_number">155</span>
 										<div class="progress">
 											<div class="progress-bar width-40"></div>
@@ -62,13 +62,13 @@
 								</div>
 							</div>
 							<!-- /info-box-content -->
-							<div class="col-12">
+							<div class="col-lg-3 col-md-6 col-sm-12">
 								<div class="info_items bg_blue d-flex align-items-center">
 									<span class="info_items_icon">
 										<i class="ion-ios-book"></i>
 									</span>
 									<div class="info_item_content">
-										<span class="info_items_text">Total Prodcut</span>
+										<span class="info_items_text">Bulan Ini</span>
 										<span class="info_items_number">52</span>
 										<div class="progress">
 											<div class="progress-bar width-85"></div>
@@ -78,13 +78,13 @@
 								</div>
 							</div>
 							<!-- /info-box-content -->
-							<div class="col-12">
+							<div class="col-lg-3 col-md-6 col-sm-12">
 								<div class="bg_pink info_items d-flex align-items-center">
 									<span class="info_items_icon">
 										<i class="ion-social-usd"></i>
 									</span>
 									<div class="info_item_content">
-										<span class="info_items_text">Sales</span>
+										<span class="info_items_text">Total Kegiatan</span>
 										<span class="info_items_number">13,921</span>
 										<span>$</span>
 										<div class="progress">

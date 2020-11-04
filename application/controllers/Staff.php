@@ -6,6 +6,9 @@ class Staff extends CI_Controller {
 	{		
 		parent::__construct();
 		$this->load->helper('url');
+		if ($this->session->userdata['logged_in'] == FALSE) {
+			redirect("auth");
+		}	
 	}
 
 	public function index()

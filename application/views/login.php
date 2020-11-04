@@ -32,7 +32,7 @@
 	<div class="limiter">
 		<div class="container-login100" action="http://localhost/almazaya_login">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="<?= base_url('login/loginForm') ?>" method="post">
+				<form class="login100-form validate-form" action="<?= base_url('auth/login') ?>" method="post">
 					<span class="login100-form-title p-b-43">
 						Almazaya Sign On
 					</span>
