@@ -23,6 +23,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class=" col-12">
 							<div class="card card-shadow mb-4">
 								<div class="card-header">
@@ -31,35 +32,41 @@
 									</div>
 								</div>
 								<div class="card-body">
-									<form>
+									<form action="<?= base_url() ?>staff/simpan" method="POST" enctype="multipart/form-data">
 										<div class="input-group">
-											<input type="date" class="form-control" value="<?php echo date('l, d M Y') ?>" aria-label="Left Icon" aria-describedby="basic-addon11" >
+											<input disabled="" name="tanggal" type="text" class="form-control" value="<?php echo date('l, d M Y') ?>" aria-label="Left Icon" aria-describedby="basic-addon11" >
+											<span class="input-group-addon">
+												<i class="fa fa-calendar"></i>
+											</span>
 										</div>
 										<br>
 										<div class="input-group">
-											<input type="time" class="form-control" value="<?php echo date('H:i:s') ?>" aria-label="basic-addon11">
+											<input disabled="" name="waktu" type="time" class="form-control" value="<?php echo date('H:i:s') ?>" aria-label="basic-addon11">
+											<span class="input-group-addon">
+												<i class="ion-android-time"></i>
+											</span>
 										</div>
 										<br>
 										<div class="input-group">
 											<span class="input-group-addon">
 												<i class="icon-note"></i>
 											</span>
-											<input type="text" class="form-control" placeholder="Nama Kegiatan" aria-label="Amount (to the nearest dollar)">
+											<input name="kegiatan" type="text" class="form-control" placeholder="Nama Kegiatan" aria-label="Amount (to the nearest dollar)">
 										</div>
 										<h6 class="mt-3">Foto</h6>
-		                                <label class="custom-file">
-		                                	<input type="file" id="file2" class="custom-file-input">
-		                                	<span class="custom-file-control"></span>
-		                                </label>
+		                                <!-- <div class="custom-file"> -->
+		                                	<input name="gambar" type="file" accept="image/*" capture="camera, gallery">
+		                                	<!-- <span class="custom-file-control"></span> -->
+		                                <!-- </div> -->
 		                                <h6 class="mt-3">File</h6>
-		                                <label class="custom-file">
-		                                	<input name="userfile" type="file" accept="image/*" capture="camera, gallery" />
-		                                	<span class="custom-file-control"></span>
-		                                </label>
+		                                <!-- <div class="custom-file"> -->
+		                                	<input name="dokumen" type="file" id="file2">
+		                                	<!-- <span class="custom-file-control"></span> -->
+		                                <!-- </div> -->
 		                                <p>
 		                                <div class="btn-demo">
-			                                <button type="button" class="btn btn-primary">Simpan</button>
-			                                <button type="button" class="btn btn-light">Batal</button>
+			                                <button type="submit" class="btn btn-primary">Simpan</button>
+			                                <!-- <button type="button" class="btn btn-light">Batal</button> -->
 		                            	</div>
 	                            	</form>
 								</div>

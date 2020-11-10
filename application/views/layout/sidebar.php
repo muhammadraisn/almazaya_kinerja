@@ -16,16 +16,19 @@
 								<a href="<?=site_url('staff/semua');?>">Semua Kegiatan</a>
 							</li>
 							<li>
-								<a href="<?=site_url('staff/cetak');?>">Cetak Kegiatan</a>
+								<a href="<?=site_url('staff/day');?>">Kegiatan Hari Ini</a>
+							</li>
+							<li>
+								<a href="<?=site_url('staff/month');?>">Kegiatan Bulan Ini</a>
 							</li>
 						</ul>
 					</li>
 					<li class="menu_sub">
 						<a href="<?=site_url('staff/progress');?>"> <i class="fa fa-bar-chart text-aqua"></i> <span>Progress</span></a>
 					</li>
-					<li class="menu_sub">
+					<!-- <li class="menu_sub">
 						<a href="<?=site_url('staff/calender');?>"> <i class="fa fa-calendar"></i> <span>Kalender </span> </a>
-					</li>
+					</li> -->
 
 					<?php } else if($this->session->userdata('level') == 'kepala'){ ?>
 					<li class="menu_sub">
@@ -41,16 +44,19 @@
 								<a href="<?=site_url('kepala/semua');?>">Semua Kegiatan</a>
 							</li>
 							<li>
-								<a href="<?=site_url('kepala/cetak');?>">Cetak Kegiatan</a>
+								<a href="<?=site_url('kepala/day');?>">Kegiatan Hari Ini</a>
+							</li>
+							<li>
+								<a href="<?=site_url('kepala/month');?>">Kegiatan Bulan Ini</a>
 							</li>
 						</ul>
 					</li>
 					<li class="menu_sub">
 						<a href="<?=site_url('kepala/progress');?>"> <i class="fa fa-bar-chart text-aqua"></i> <span>Progress</span></a>
 					</li>
-					<li class="menu_sub">
+					<!-- <li class="menu_sub">
 						<a href="<?=site_url('kepala/calender');?>"> <i class="fa fa-calendar"></i> <span>Kalender </span> </a>
-					</li>
+					</li> -->
 
 					<?php } else if($this->session->userdata('level') == 'admin'){ ?>
 					<li class="menu_sub">
