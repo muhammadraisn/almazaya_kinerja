@@ -9,7 +9,7 @@
 				</div>
 				<div class="right_detail">
 					<div class="row d-flex align-items-center min-h pos-md-r">
-						<div class="col-3 search_col ">
+						<!-- <div class="col-3 search_col ">
 							<div class="top_function">
 
 								<div class="search">
@@ -25,8 +25,8 @@
 									</form>
 								</div>
 							</div>
-						</div>
-						<div class=" col-9 d-flex justify-content-end">
+						</div> -->
+						<div class=" col-12 d-flex justify-content-end">
 							<div class="right_bar_top d-flex align-items-center">
 
 								<!-- DropDown_Inbox -->

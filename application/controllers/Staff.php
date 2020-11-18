@@ -14,6 +14,44 @@ class Staff extends CI_Controller {
 
 	public function index()
 	{
+		$this->db->select('*');
+		$this->db->from("kinerja");
+		$this->db->where('id_user', $this->session->userdata('id'));
+		$this->db->order_by('tanggal', 'DESC');
+		$data = $this->db->get();
+
+		$this->vars['data'] = $data->result_array();
+
+		$this->db->select("*");
+		$this->db->from("kinerja");
+		$this->db->where('id_user', $this->session->userdata('id'));
+		$this->db->where('tanggal', date('Y-m-d'));
+		// $this->db->order_by('tanggal', 'DESC');
+		$day = $this->db->get();
+
+		$this->vars['day'] = $day->result_array();
+
+		$this->db->select("*");
+		$this->db->from("kinerja");
+		$this->db->where('id_user', $this->session->userdata('id'));
+		$this->db->where('month(tanggal)', date('m'));
+		// $this->db->order_by('tanggal', 'DESC');
+		$month = $this->db->get();
+
+		$this->vars['month'] = $month->result_array();
+
+		$this->db->select("*");
+		$this->db->from("kinerja");
+		// $this->db->where('id_user', $this->session->userdata('id'));
+		$this->db->where('status', 'Mulai');
+		$this->db->or_where('status', 'Proses');
+		$this->db->having('id_user', $this->session->userdata('id'));
+		$this->db->order_by('tanggal', 'ASC');
+		$this->db->order_by('waktu', 'ASC');
+		$progress = $this->db->get();
+
+		$this->vars['progress'] = $progress->result_array();
+
 		$this->vars['content'] = 'staff/dashboard';
 		$this->load->view('index', $this->vars);
 	}
