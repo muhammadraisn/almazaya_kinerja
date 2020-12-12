@@ -42,6 +42,8 @@ class Auth extends CI_Controller {
 				redirect("staff");
 			}elseif ($this->session->userdata('level') == 'kepala') {
 				redirect("kepala");
+			}elseif ($this->session->userdata('level') == 'pimpinan') {
+				redirect("pimpinan/karyawan");
 			}
 		} else {
 			$this->session->set_flashdata('error_login', 'Username atau Password Salah');

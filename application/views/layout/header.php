@@ -82,7 +82,8 @@
 									 <?php if ($this->session->userdata('foto')==NULL): ?>
 									 <!-- <img class="img-circle pro_pic" src="<?php echo base_url() ?> upload/foto_user/user5.png" alt=""> </a> -->
 									 <?php else: ?>
-									 <img class="img-circle pro_pic" src="<?php echo base_url().'upload/foto_user/'.$this->session->userdata('foto') ?>" alt=""> </a>
+									 <img class="img-circle pro_pic" src="<?php echo base_url().'upload/foto_user/'.$this->session->userdata('foto') ?>" alt=""> 
+									</a>
 									<?php endif ?>
 									<ul class="dropdown-menu dropdown-menu-default">
 										<li>
