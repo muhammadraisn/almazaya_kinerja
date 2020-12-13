@@ -265,6 +265,7 @@ class Pimpinan extends CI_Controller {
 
 		$this->db->select("*");
 		$this->db->from("users");
+		$this->db->where('id !='.$this->session->userdata('id'));
 		$this->db->order_by('ranking_saw', 'DESC');
 		$data = $this->db->get();
 
