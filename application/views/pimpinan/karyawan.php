@@ -60,7 +60,7 @@
                                                 <?php elseif ($no == 3): ?>
                                                 <tr align="center" style="background-color: #CD7F32">
                                                 <?php else: ?>
-                                                <tr align="center" style="background-color: white">
+                                                <tr align="center">
                                                 <?php endif ?>
                                                     <td><?= $no++ ?></td>
                                                     <td align="center">
